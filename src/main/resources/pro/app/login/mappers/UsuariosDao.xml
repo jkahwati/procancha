@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+	<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper
+	namespace="procancha.app.login.mappers.UsuariosMapper">
+	<!-- Obtener datos del cliente por el rut -->
+	<select id="findByRut"
+		resultType="procancha.app.login.entity.Usuario">
+		SELECT id_usuario, descripcion, rut from usuarios INNER JOIN roles ON usuarios.id_rol = roles.id_rol where rut = #{rut}
+	</select>
+</mapper>
+
+
+<!-- 	<select id="clientePorRut" resultType="cl.segurosfalabella.ivr.dto.ClienteDto"> -->
+<!-- 		SELECT -->
+<!-- 		cli.cacn_nu_documento as rut, -->
+<!-- 		cli.cacn_cd_verificador as -->
+<!-- 		digitoVerificador, -->
+<!-- 		cli.cacn_nombres as nombres, -->
+<!-- 		cli.cacn_apellido_paterno as apellidoPaterno, -->
+<!-- 		cli.cacn_apellido_materno as apellidoMaterno -->
+<!-- 		FROM cart_clientes cli -->
+<!-- 		WHERE cli.cacn_cd_verificador = #{digitoVerificador} -->
+<!-- 		AND -->
+<!-- 		cli.cacn_nu_documento = #{rut} -->
+<!-- 	</select> -->

@@ -1,7 +1,13 @@
 package procancha.app.login.entity;
 
 import java.util.List;
-import javax.persistence.*;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
@@ -18,9 +24,9 @@ public class Rol{
 	
 	private String descripcion;
 	
-	@OneToMany(mappedBy = "rol")
-	@JsonIgnore
-	private List<Usuario> usuarios;
+//	@OneToMany(mappedBy = "rol")
+//	@JsonIgnore
+//	private List<Usuario> usuarios; 
 
 	public Rol() { 
 	}
@@ -41,12 +47,12 @@ public class Rol{
 		this.descripcion = descripcion;
 	}
 
-	public List<Usuario> getUsuarios() {
-		return usuarios;
-	}
-
-	public void setUsuarios(List<Usuario> usuarios) {
-		this.usuarios = usuarios;
-	}
+//	public List<Usuario> getUsuarios() {
+//		return usuarios;
+//	}
+//
+//	public void setUsuarios(List<Usuario> usuarios) {
+//		this.usuarios = usuarios;
+//	}
 
 }

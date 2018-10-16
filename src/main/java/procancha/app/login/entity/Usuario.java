@@ -6,33 +6,44 @@ import javax.persistence.*;
  * The persistent class for the USUARIOS database table.
  * 
  */
-@Entity
-@Table(name="usuarios")
+//@Entity
+//@Table(name="usuarios")
 public class Usuario{
 
-	@Id
-	@Column(name="id_usuario")
-	private Integer idUsuario;
+//	@Id
+//	@Column(name="id_usuario")
+	private Integer id_usuario;
 	
 	private String rut;
 	
-	@ManyToOne()
-	@JoinColumn(name="id_rol")
-    private Rol rol;
+	private String descripcion;
+	
+//	@ManyToOne()
+//	@JoinColumn(name="id_rol")
+    private Rol id_rol;
 
 
 	public Usuario() { 
 	}
 
 
-	public Integer getIdUsuario() {
-		return idUsuario;
+
+
+
+	public Integer getId_usuario() {
+		return id_usuario;
 	}
 
 
-	public void setIdUsuario(Integer idUsuario) {
-		this.idUsuario = idUsuario;
+
+
+
+	public void setId_usuario(Integer id_usuario) {
+		this.id_usuario = id_usuario;
 	}
+
+
+
 
 
 	public String getRut() {
@@ -45,13 +56,38 @@ public class Usuario{
 	}
 
 
-	public Rol getRol() {
-		return rol;
+
+
+
+	public Rol getId_rol() {
+		return id_rol;
 	}
 
 
-	public void setRol(Rol rol) {
-		this.rol = rol;
+
+
+
+	public void setId_rol(Rol id_rol) {
+		this.id_rol = id_rol;
 	}
+
+
+
+
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+
+
+
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+
+
 
 }
